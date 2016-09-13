@@ -16,6 +16,7 @@ public class VideoTextureUI : MonoBehaviour
     {
         // 動画ファイルの読み込み
         SourceMovieTexture = (MovieTexture)Resources.Load(filename, typeof(MovieTexture));
+        SourceMovieTexture.loop = true;
 
         // 動画再生先のテクスチャにMovieTextureを設定
         gameObject.GetComponent<Image>().material.SetTexture("_MainTex", SourceMovieTexture);
